@@ -1,0 +1,26 @@
+{% extends 'learning_logs/base.html' %} 
+{% load django_bootstrap5 %}
+
+
+{% block page_header %}
+  
+  <div class="w-50 p3 mx-auto">
+    <h2>Hi! You're welcome!</h2>
+  </div>
+
+  {% endblock page_header %}
+
+{% block content %}
+
+<div class="w-50 p3 mx-auto">
+  <form class='form' method='post' action="{% url 'users:register' %}">
+    {% csrf_token %}
+    {% bootstrap_form form %} 
+ 
+    {% block buttons %}
+      <button class='btn btn-primary fs-5' name="submit">Register</button>
+    {% endblock buttons %}
+  <input type='hidden' name='next' value="{% url 'learning_logs:index' %}">
+  </form>
+</div>
+{% endblock content %}
