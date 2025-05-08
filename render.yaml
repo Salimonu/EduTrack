@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: edutrack
+    env: python
+    buildcommand: "pip install -r requirements.txt"
+    startcommand: "gunicorn learning_log.wsgi"
+    envVars:
+      - Key: DJANGO_SETTINGS_MODULE
+        value: learning_log.settings
+      - key: SECRET_KEY
+        generateValue: true
+        
