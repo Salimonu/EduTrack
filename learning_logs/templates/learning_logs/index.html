@@ -1,20 +1,66 @@
 {% extends 'learning_logs/base.html' %} 
+{% load static %}
 
 {% block page_header %}
-  <div class='bg-primary-subtle p-5'>
-    <h1 class='display-3 animate__animated animate__backInLeft animate__slow'>Track your learning.</h1>
+  <div class="row align-items-center justify-content-center">
+    <div class='col-lg-7 col-sm-12 p-5'>
+      <span class='fs-4'>Track everything you learn</span>
+      <h1 class='display-3 animate__animated animate__backInLeft animate__slow'>Master Your Learning Journey</h1>
 
-    <p class='lead'>Make your own Learning Log, and keep a list of the topics your're learning
-      about. Whenever you learn something new about a topic, make an entry summarizing what you've 
-      learned.</p>
+      <p class='lead'> EduTrack empowers students and professionals to stay focused and retain knowledge by making it easy to log 
+        topics and add learning notes along the way. Register, start a topic, and build your learning archive effortlessly.
+        </p>
 
-    <a class='btn btn-lg btn-primary animate__animated animate__pulse animate__infinite' href="{% url 'users:register' %}" role='button'>Register &raquo;</a>
+      <a class='btn btn-lg btn-primary animate__animated animate__pulse animate__infinite' href="{% url 'users:register' %}" role='button'>Join EduTrack Today &raquo;</a>
+    </div>
+    <div class="col-lg-5 col-sm-10">
+      <img width='100%' src="{% static 'learning_logs/images/logo.png' %}" alt="Hero image" />
+    </div>
   </div>
 {% endblock page_header %}
 
 {% block content %}
-<p>
-  Learning log helps you keep track of your learning, for any topic you're
-  learning about.
-</p>
+
+<div id="textCarousel" class="carousel slide bg-primary-subtle" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner text-center p-4">
+    <div class="carousel-item active">
+        <p class="fs-4 fst-italic">"Don’t just learn—track your growth, reflect, and thrive." <br>— EduTrack</p>
+    </div>
+    <div class="carousel-item">
+        <p class="fs-4 fst-italic">"An investment in knowledge pays the best interest." <br>— Benjamin Franklin</p>
+    </div>
+    <div class="carousel-item">
+        <p class="fs-4 fst-italic">"Every expert was once a beginner." <br>— Helen Hayes</p>
+    </div>
+    <div class="carousel-item">
+        <p class="fs-4 fst-italic">"Learning never exhausts the mind." <br>— Leonardo da Vinci</p>
+    </div>
+    <div class="carousel-item">
+        <p class="fs-4 fst-italic">"Success is the sum of small efforts, repeated day in and day out." <br>— Robert Collier </p>
+    </div>
+    <div class="carousel-item">
+        <p class="fs-4 fst-italic">"Live as if you were to die tomorrow. Learn as if you were to live forever." <br>— Mahatma Gandhi </p>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#textCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <div id="textCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+</div>
+
 {% endblock content %}
