@@ -2,15 +2,14 @@
 {% load static %}
 
 {% block page_header %}
-  <div class="row align-items-center justify-content-center">
-    <div class='col-lg-7 col-sm-12 p-5'>
+  <div class="row align-items-center justify-content-center" id="About">
+    <div class='col-lg-7 col-sm-12 p-4'>
       <span class='fs-4'>Track everything you learn</span>
       <h1 class='display-3 animate__animated animate__backInLeft animate__slow'>Master Your Learning Journey</h1>
 
       <p class='lead'> EduTrack empowers students and professionals to stay focused and retain knowledge by making it easy to log 
         topics and add learning notes along the way. Register, start a topic, and build your learning archive effortlessly.
         </p>
-
       <a class='btn btn-lg btn-primary animate__animated animate__pulse animate__infinite' href="{% url 'users:register' %}" role='button'>Join EduTrack Today &raquo;</a>
     </div>
     <div class="col-lg-5 col-sm-10">
@@ -21,7 +20,7 @@
 
 {% block content %}
 
-<div id="textCarousel" class="carousel slide bg-primary-subtle" data-bs-ride="carousel">
+<div id="textCarousel" class="carousel slide bg-success-subtle mt-4" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -30,26 +29,113 @@
     <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
     <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
   </div>
-  <div class="carousel-inner text-center p-4">
+  <div class="carousel-inner text-center p-4" id="Qoutes">
     <div class="carousel-item active">
-        <p class="fs-4 fst-italic">"Don’t just learn—track your growth, reflect, and thrive." <br>— EduTrack</p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"Don’t just learn—track your growth, reflect, and thrive."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               EduTrack 
+              {% comment %} <cite title="Source Title">Source Title</cite> {% endcomment %}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+        {% comment %} <p class="fs-4 fst-italic">"Don’t just learn—track your growth, reflect, and thrive." <br>— EduTrack</p> {% endcomment %}
     </div>
     <div class="carousel-item">
-        <p class="fs-4 fst-italic">"An investment in knowledge pays the best interest." <br>— Benjamin Franklin</p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"An investment in knowledge pays the best interest."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Benjamin Franklin
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
     <div class="carousel-item">
-        <p class="fs-4 fst-italic">"Every expert was once a beginner." <br>— Helen Hayes</p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"Every expert was once a beginner."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Helen Hayes
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
     <div class="carousel-item">
-        <p class="fs-4 fst-italic">"Learning never exhausts the mind." <br>— Leonardo da Vinci</p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"Learning never exhausts the mind."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Leonardo da Vinci
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
     <div class="carousel-item">
-        <p class="fs-4 fst-italic">"Success is the sum of small efforts, repeated day in and day out." <br>— Robert Collier </p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"Success is the sum of small efforts, repeated day in and day out."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Robert Collier
+            </figcaption>
+          </figure>
+        </div>
+      </div>  
     </div>
     <div class="carousel-item">
-        <p class="fs-4 fst-italic">"Live as if you were to die tomorrow. Learn as if you were to live forever." <br>— Mahatma Gandhi </p>
+      <div class="card">
+        <div class="card-header">
+          Inspirational Quote
+        </div>
+        <div class="card-body">
+          <figure>
+            <blockquote class="blockquote">
+              <p class="fs-4 fst-italic">"Live as if you were to die tomorrow. Learn as if you were to live forever."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Mahatma Gandhi
+            </figcaption>
+          </figure>
+        </div>
+      </div>  
     </div>
   </div>
+</div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -60,7 +146,91 @@
     <span class="visually-hidden">Next</span>
   </button>
 
-  <div id="textCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div id="textCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"></div>
+</div>
+
+<div class="mt-5" id='Features'>
+  <h2>How to Use EduTrack</h2>
+  <div class="row">
+    <div class="col-lg-5 mt-3">
+      <div class="card">
+        <h5 class="card-header">Create an Account</h5>
+        <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text">Register a free account to start your learning journey. Start your success story today.</p>
+          <a href="{% url 'users:register' %}" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 ms-auto mt-4">
+      <div class="card">
+        <h5 class="card-header">Add a New Topic</h5>
+        <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text">Click "Add Topic", give it a meaningful name, and begin organizing what you want to learn.</p>
+          <a href="{% url 'learning_logs:new_topic' %}" class="btn btn-primary">Add a New Topic</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 mt-4">
+      <div class="card">
+        <h5 class="card-header">Manage your Topics</h5>
+          <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text">Edit or delete topics anytime. Keep your learning space organized and relevant to your current focus.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-5 ms-auto mt-4">
+      <div class="card">
+        <h5 class="card-header">Add Rich Learning Entries</h5>
+          <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text">Inside a topic, click "Add Entry". Write down what you’ve learned.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 mt-4">
+      <div class="card">
+        <h5 class="card-header"> View and Reflect on Entries </h5>
+          <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text"> Entries are displayed with their date and time, helping you track your learning progress like a digital journal. </p>
+          </div>
+      </div>
+
+    </div>
+    <div class="col-lg-5 ms-auto mt-4">
+      <div class="card">
+        <h5 class="card-header"> Mobile-Friendly Access </h5>
+          <div class="card-body">
+          <h5 class="card-title">icon</h5>
+          <p class="card-text"> Use EduTrack seamlessly on your phone, tablet, or computer. Keep learning wherever you are. </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row align-items-center mt-4 p-4 bg-success-subtle">
+  <div class="col-lg-7">
+    <img style="width:100%; height: 200px; object-fit:cover" src="{% static 'learning_logs/images/logo.png' %}" alt="my Logo" />
+  </div>
+  <div class="col-lg-5">
+    <figure>
+      <blockquote class="blockquote">
+        <p class="fs-4 fst-italic">"Success is the sum of small efforts, repeated day in and day out."</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+          Robert Collier
+      </figcaption>
+    </figure>
+      <a class='btn btn-lg btn-primary animate__animated animate__pulse animate__infinite' href="{% url 'users:register' %}" role='button'>Join EduTrack Today &raquo;</a>
+  </div>
 </div>
 
 {% endblock content %}

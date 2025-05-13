@@ -27,8 +27,8 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
       <div class="container-fluid">
-        <img width='75px' src="{% static 'learning_logs/images/logo.png' %}" alt="my Logo" />
-        <a class="d-none d-lg-block navbar-brand text-uppercase fs-4" href="{% url 'learning_logs:index' %}">Learning Log</a>
+        <a href="{% url 'learning_logs:index' %}"><img width='75px' src="{% static 'learning_logs/images/logo.png' %}" alt="my Logo" /></a>
+        <a class="d-none d-lg-block navbar-brand text-uppercase fs-4" href="{% url 'learning_logs:index' %}">EduTrack</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,7 @@
         </div> 
       </div>
     </nav>
-  <main role="main" class='container'>    
+  <main role="main" class='container p-4'>    
     <div class='pb-2'>
       {% comment %} mb-2 border-bottom {% endcomment %}
       {% block page_header %} {% endblock page_header %}
@@ -69,8 +69,52 @@
     </div>
   </main>
 
-  <footer role="footer" class='container'>
-    <p>&copy; 2025. All rights reserved.</p>
+  <footer role="footer" class='bg-success mt-4 p-5 text-white'>
+    <div class="row">
+      <div class=" col-sm-6 d-none d-lg-block">
+        <div class="d-flex flex-column justify-content-between">
+          <img class="mb-3" width='75px' src="{% static 'learning_logs/images/logo.png' %}" alt="my Logo" />
+          <p class="mt-5">&copy; 2025. All rights reserved.</p>
+        </div>
+      </div>
+    <div class="col-sm-3 mt-4">
+      <ul class="nav text-white d-flex flex-column align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active navbar-brand text-uppercase fs-4" href="{% url 'learning_logs:index' %}" aria-current="page">EduTrack </a>
+        </li>
+        <li class="nav-item">
+          <a class='text-white nav-link fs-5' href="{% url 'users:register' %}">Register</a> 
+        </li>
+        <li class="nav-item">
+          <a class='text-white nav-link fs-5' href="{% url 'users:login' %}">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-white nav-link fs-5" aria-current="page" href="{% url 'learning_logs:topics' %}">Topics</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-3 mt-4">
+      <ul class="nav flex-column align-items-center text-white">
+        <li class="nav-item">
+          <a class="nav-link active navbar-brand text-uppercase fs-4" href="{% url 'learning_logs:index' %}" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-white nav-link fs-5" aria-current="page" href="{% url 'learning_logs:index' %}#Qoutes">Qoutes</a>
+        </li>
+        <li class="nav-item">
+          <a class='text-white nav-link fs-5' href="{% url 'learning_logs:index' %}#About">About us</a> 
+        </li>
+        <li class="nav-item">
+          <a class='text-white nav-link fs-5' href="{% url 'learning_logs:index' %}#Features">Features</a>
+        </li>
+        
+      </ul>
+      <div class="d-flex justify-content-center">
+        <p class="mt-4 d-lg-none d-sm-block ">&copy; 2025. All rights reserved.</p>
+      </div>
+    </div>
+    </div>
+    
   </footer>
 
   <!-- Bootstrap JS Bundle -->
